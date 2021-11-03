@@ -7,11 +7,13 @@ module Types
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
+    field :member, Types::MemberType, null: false do
+      description 'メンバーを主キーで検索する'
+      argument :id, ID, required: true
+    end
+
+    def member(id:)
+      Member.find(id)
     end
   end
 end
