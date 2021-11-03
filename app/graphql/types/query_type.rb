@@ -8,5 +8,6 @@ module Types
     # They will be entry points for queries on your schema.
 
     field :member, resolver: Resolvers::MemberResolver
+    field :prefecture, resolver: Resolvers::PrefectureResolver
   end
 end

@@ -10,19 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_211_103_124_701) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension 'plpgsql'
+ActiveRecord::Schema.define(version: 2021_11_03_164420) do
 
-  create_table 'members', force: :cascade do |t|
-    t.string 'first_name', null: false
-    t.string 'first_name_hiragana', null: false
-    t.string 'last_name', null: false
-    t.string 'last_name_hiragana', null: false
-    t.string 'handle_name', null: false
-    t.datetime 'birthday', null: false
-    t.text 'comment', null: false
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "members", force: :cascade do |t|
+    t.string "first_name", null: false
+    t.string "first_name_hiragana", null: false
+    t.string "last_name", null: false
+    t.string "last_name_hiragana", null: false
+    t.string "handle_name", null: false
+    t.datetime "birthday", null: false
+    t.text "comment", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
+
+  create_table "prefectures", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
 end
