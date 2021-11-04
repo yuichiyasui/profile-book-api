@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_03_164420) do
+ActiveRecord::Schema.define(version: 2021_11_04_131714) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2021_11_03_164420) do
     t.text "comment", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "home_prefecture_id", default: 0, null: false
+    t.integer "residence_prefecture_id", default: 0, null: false
   end
 
   create_table "prefectures", force: :cascade do |t|

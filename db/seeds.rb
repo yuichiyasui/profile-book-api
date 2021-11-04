@@ -13,6 +13,8 @@ Member.create(
       last_name: 'テスト',
       last_name_hiragana: 'てすと',
       handle_name: '桃太郎',
+      home_prefecture_id: 1,
+      residence_prefecture_id: 27,
       birthday: '1998-11-03',
       comment: 'よろしくお願いします。'
     }
