@@ -1,24 +1,23 @@
-# README
+# Profile Book API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+チームメンバーのプロフィール情報を管理する GraphQL API
 
-Things you may want to cover:
+## バージョン情報
 
-* Ruby version
+- Ruby 3.0.2
+- Ruby on Rails 6.0.3
+- PostgreSQL 14.0
 
-* System dependencies
+## 使用ツール
 
-* Configuration
+### Ruby のバージョン管理
 
-* Database creation
+[rbenv](https://github.com/rbenv/rbenv)
 
-* Database initialization
+### GraphQL Client
 
-* How to run the test suite
+[Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja)
 
-* Services (job queues, cache servers, search engines, etc.)
+### lint
 
-* Deployment instructions
-
-* ...
+[RuboCop](https://github.com/rubocop/rubocop)
