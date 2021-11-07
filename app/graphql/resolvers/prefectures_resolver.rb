@@ -1,5 +1,5 @@
 module Resolvers
-  class PrefectureResolver < Resolvers::BaseResolver
+  class PrefecturesResolver < Resolvers::BaseResolver
     description '都道府県一覧を取得する'
     type [Types::PrefectureType], null: false
 
