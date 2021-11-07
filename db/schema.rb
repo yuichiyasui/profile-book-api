@@ -25,8 +25,10 @@ ActiveRecord::Schema.define(version: 2021_11_04_131714) do
     t.text "comment", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "home_prefecture_id", default: 0, null: false
-    t.integer "residence_prefecture_id", default: 0, null: false
+    t.bigint "home_prefecture_id"
+    t.bigint "residence_prefecture_id"
+    t.index ["home_prefecture_id"], name: "index_members_on_home_prefecture_id"
+    t.index ["residence_prefecture_id"], name: "index_members_on_residence_prefecture_id"
   end
 
   create_table "prefectures", force: :cascade do |t|
@@ -35,4 +37,6 @@ ActiveRecord::Schema.define(version: 2021_11_04_131714) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "members", "prefectures", column: "home_prefecture_id"
+  add_foreign_key "members", "prefectures", column: "residence_prefecture_id"
 end

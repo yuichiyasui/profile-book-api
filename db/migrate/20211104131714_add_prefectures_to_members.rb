@@ -1,11 +1,11 @@
 class AddPrefecturesToMembers < ActiveRecord::Migration[6.0]
   def up
-    add_column :members, :home_prefecture_id, :integer, default: 0, null: false
-    add_column :members, :residence_prefecture_id, :integer, default: 0, null: false
+    add_reference :members, :home_prefecture, foreign_key: { to_table: :prefectures }
+    add_reference :members, :residence_prefecture, foreign_key: { to_table: :prefectures }
   end
 
   def down
-    remove_column :members, :home_prefecture_id, :integer, default: 0, null: false
-    remove_column :members, :residence_prefecture_id, :integer, default: 0, null: false
+    remove_reference :members, :home_prefecture, foreign_key: { to_table: :prefectures }
+    remove_reference :members, :residence_prefecture, foreign_key: { to_table: :prefectures }
   end
 end
