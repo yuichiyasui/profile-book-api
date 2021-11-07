@@ -17,5 +17,6 @@ module Types
 
     field :home_prefecture, Types::PrefectureType, null: false
     field :residence_prefecture, Types::PrefectureType, null: false
+    field :hobbies, [Types::HobbyType], null: false
   end
 end
