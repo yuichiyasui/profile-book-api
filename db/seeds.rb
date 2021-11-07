@@ -63,6 +63,14 @@ categories.each do |category|
   Category.create(name: category)
 end
 
+Hobby.create(
+  [
+    { name: 'ギター', category_id: 1 },
+    { name: '温泉', category_id: 2 },
+    { name: 'ランニング', category_id: 3 }
+  ]
+)
+
 Member.create(
   [
     {
