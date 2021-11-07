@@ -3,4 +3,6 @@ class Member < ApplicationRecord
   belongs_to :residence_prefecture, class_name: 'Prefecture'
   has_many :member_hobbies
   has_many :hobbies, through: :member_hobbies
+  has_many :member_specialities
+  has_many :specialities, through: :member_specialities
 end

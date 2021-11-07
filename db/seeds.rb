@@ -101,3 +101,10 @@ MemberHobby.create(
     { hobby_id: 3, member_id: 1 }
   ]
 )
+
+MemberSpeciality.create(
+  [
+    { speciality_id: 1, member_id: 1 },
+    { speciality_id: 2, member_id: 1 }
+  ]
+)
