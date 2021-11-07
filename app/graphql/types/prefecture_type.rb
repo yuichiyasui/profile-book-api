@@ -1,5 +1,7 @@
 module Types
   class PrefectureType < Types::BaseObject
+    description '都道府県'
+
     field :id, ID, null: false
     field :name, String, null: false
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
