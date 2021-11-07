@@ -9,5 +9,6 @@ module Types
 
     field :member, resolver: Resolvers::MemberResolver
     field :prefecture, resolver: Resolvers::PrefectureResolver
+    field :categories, resolver: Resolvers::CategoriesResolver
   end
 end
