@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_07_081304) do
+ActiveRecord::Schema.define(version: 2021_11_07_091107) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,15 @@ ActiveRecord::Schema.define(version: 2021_11_07_081304) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["category_id"], name: "index_hobbies_on_category_id"
+  end
+
+  create_table "member_hobbies", force: :cascade do |t|
+    t.bigint "member_id", null: false
+    t.bigint "hobby_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["hobby_id"], name: "index_member_hobbies_on_hobby_id"
+    t.index ["member_id"], name: "index_member_hobbies_on_member_id"
   end
 
   create_table "members", force: :cascade do |t|
@@ -52,6 +61,8 @@ ActiveRecord::Schema.define(version: 2021_11_07_081304) do
   end
 
   add_foreign_key "hobbies", "categories"
+  add_foreign_key "member_hobbies", "hobbies"
+  add_foreign_key "member_hobbies", "members"
   add_foreign_key "members", "prefectures", column: "home_prefecture_id"
   add_foreign_key "members", "prefectures", column: "residence_prefecture_id"
 end
