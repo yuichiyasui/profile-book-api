@@ -71,6 +71,13 @@ Hobby.create(
   ]
 )
 
+Speciality.create(
+  [
+    { name: '料理', category_id: 4 },
+    { name: 'モノマネ', category_id: 5 }
+  ]
+)
+
 Member.create(
   [
     {
@@ -92,5 +99,12 @@ MemberHobby.create(
     { hobby_id: 1, member_id: 1 },
     { hobby_id: 2, member_id: 1 },
     { hobby_id: 3, member_id: 1 }
+  ]
+)
+
+MemberSpeciality.create(
+  [
+    { speciality_id: 1, member_id: 1 },
+    { speciality_id: 2, member_id: 1 }
   ]
 )
