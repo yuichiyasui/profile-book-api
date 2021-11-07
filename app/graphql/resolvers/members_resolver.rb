@@ -1,6 +1,6 @@
 module Resolvers
   class MembersResolver < Resolvers::BaseResolver
-    description 'メンバー一覧を取得する'
+    description 'メンバー一覧'
     type Types::MemberType.connection_type, null: false
 
     def resolve

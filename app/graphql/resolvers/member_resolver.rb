@@ -1,6 +1,6 @@
 module Resolvers
   class MemberResolver < Resolvers::BaseResolver
-    description 'メンバーをIDで検索する'
+    description 'メンバー'
 
     type Types::MemberType, null: false
 
