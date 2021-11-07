@@ -57,6 +57,12 @@ Prefecture.create(
   ]
 )
 
+categories = %w[音楽 リラクゼーション スポーツ クリエイティブ エンターテイメント]
+
+categories.each do |category|
+  Category.create(name: category)
+end
+
 Member.create(
   [
     {
