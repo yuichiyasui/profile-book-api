@@ -5,6 +5,7 @@ module Types
     field :category_id, Integer, null: true
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
-    field :category, Types::CategoryType, null: true
+
+    field :category, Types::CategoryType, null: false
   end
 end
