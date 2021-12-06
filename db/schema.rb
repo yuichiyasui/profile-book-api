@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 2021_12_05_083009) do
 
   create_table "temporary_users", force: :cascade do |t|
     t.string "email", null: false
-    t.string "password", null: false
+    t.string "password_digest", null: false
     t.string "uuid", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
