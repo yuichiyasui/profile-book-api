@@ -1,0 +1,51 @@
+
+<head>
+	<title></title>
+	<style>
+		.title {
+			color: #0d47a1;
+		}
+
+		.link {
+			display: block;
+			width: fit-content;
+			background-color: #0d47a1;
+			margin: 0 auto 20px;
+			padding: 10px 20px;
+			border-radius: 5px;
+			color: #fff !important;
+			text-decoration: none;
+			font-weight: 700;
+			text-align: center;
+		}
+
+		.link:hover {
+			opacity: 0.8;
+			transition: opacity 0.5s;
+		}
+	</style>
+</head>
+<body>
+	<h2 class="title">Profile Bookへの登録を完了してください</h2>
+	<p>
+		<%= @email %> 様
+	</p>
+	<p>
+		ユーザー登録の完了にあたり本メールの下記リンクにアクセスいただき、認証を行うことで本サービスがご利用いただけるようになります。
+	</p>
+
+	<a 
+		href="<%= @link %>"
+		target="_blank"
+		rel="noopener noreferrer"
+		class="link"
+	>
+		登録を完了する
+	</a>
+
+	<p>
+		お手数ですがご確認よろしくお願いいたします。<br>
+		&#40;上記リンクの有効期限は配信から24時間以内となります。
+		有効期限を過ぎてしまった場合はお手数ですが再度ユーザー登録をお願いいたします。&#41;
+	</p>
+</body>
