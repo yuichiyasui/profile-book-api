@@ -12,6 +12,7 @@ module Mutations
       params[:uuid] = SecureRandom.uuid
       begin
         temporary_user = TemporaryUser.create!(params)
+        UserRegistrationMailer.send_confirmation(temporary_user).deliver
         { temporary_user: temporary_user }
       rescue ActiveRecord::RecordInvalid => e
         GraphQL::ExecutionError.new(e, extensions: { code: 'RECORD_INVALID' })
