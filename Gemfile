@@ -44,3 +44,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'graphql'
 
 gem 'dotenv-rails'
+
+# 認証
+gem 'devise'
+gem 'devise_token_auth'
