@@ -1,8 +1,9 @@
-class User < ApplicationRecord
-  VALID_EMAIL_REGEX = /[\w\-._]+@[\w\-._]+\.[A-Za-z]+/
+# frozen_string_literal: true
 
-  has_secure_password
-  validates :email,
-            uniqueness: true,
-            format: { with: VALID_EMAIL_REGEX }
+class User < ActiveRecord::Base
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable, :confirmable
+  include GraphqlDevise::Concerns::Model
 end

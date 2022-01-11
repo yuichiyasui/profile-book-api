@@ -1,5 +1,5 @@
 module Mutations
-  class CreateUser < GraphqlDevise::Mutations::SignUp
+  class SignUp < GraphqlDevise::Mutations::SignUp
     description 'ユーザー登録する'
 
     argument :email, String, 'メールアドレス', required: true
