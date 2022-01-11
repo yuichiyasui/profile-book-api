@@ -1,0 +1,14 @@
+<h2>Profile Bookへの登録を完了してください</h2>
+<p><%= @email %> 様</p>
+
+<p><%= t('.confirm_link_msg') %></p>
+
+<p>
+  <%= link_to t('.confirm_account_link'), "#{message['redirect-url'].to_s}?#{{ confirmationToken: @token }.to_query}" %>
+</p>
+
+<p>
+	お手数ですがご確認よろしくお願いいたします。<br>
+	&#40;上記リンクの有効期限は配信から24時間以内となります。
+	有効期限を過ぎてしまった場合はお手数ですが再度ユーザー登録をお願いいたします。&#41;
+</p>
