@@ -46,3 +46,5 @@ gem 'graphql'
 gem 'dotenv-rails'
 
 gem 'graphql_devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
