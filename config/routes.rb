@@ -5,7 +5,8 @@ Rails.application.routes.draw do
     at: '/graphql_auth',
     operations: {
       # login: Mutations::Login,
-      register: Mutations::SignUp
+      register: Mutations::SignUp,
+      confirm_registration_with_token: Mutations::ConfirmRegistrationWithToken
     }
   )
   post '/graphql', to: 'graphql#execute'
