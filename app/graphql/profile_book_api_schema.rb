@@ -1,4 +1,20 @@
 class ProfileBookApiSchema < GraphQL::Schema
+  use GraphqlDevise::SchemaPlugin.new(
+    query: Types::QueryType,
+    mutation: Types::MutationType,
+    authenticate_default: false,
+    resource_loaders: [
+      GraphqlDevise::ResourceLoader.new(
+        User,
+        operations: {
+          register: Mutations::SignUp,
+          confirm_registration_with_token: Mutations::ConfirmRegistrationWithToken
+          # login: Mutations::Login,
+        }
+      )
+    ]
+  )
+
   mutation(Types::MutationType)
   query(Types::QueryType)
 
